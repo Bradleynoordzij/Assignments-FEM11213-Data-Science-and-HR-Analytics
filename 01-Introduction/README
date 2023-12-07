@@ -51,5 +51,6 @@ par(mar=c(9,3,1,1))
 barplot(prop.table(table(CEO_Diary$type)), las=0)
 dev.off()
 
-
+## this combination creates a logistic regression for response variable strategy, using control variables consultants and politicians. The summary(fit) code shows the output of the estimated regression coefficients 
 fit <-glm(strategy ~ consultants + politicians, data=CEO_Diary); summary fit
+summary(fit)
