@@ -1,18 +1,26 @@
-#Practice file while using the survery_response_data.csvs
+#Practice file while using the survery_response_data.csv
+
 #To load the dataset survey response data, which is stored as a csv file
 CEO_Diary <- read.csv("~/Desktop/Data_science/Data/survey_response_data.csv")
+
 #shows the dataset, similar to browse in stata
 View(CEO_Diary)
+
 #shows rows 1 until 15, and colums 1 -5 and 37, 39,40
 CEO_Diary[1:15,c(1:5,37, 39, 40)]
+
 # shows the type / class of a variable, in this case all characters
 apply(CEO_Diary,2,class)
+
 #to count the rows
 nrow(CEO_Diary)
+
 #Summary statistics of all variables in the dataset
 summary(CEO_Diary)
+
 #summary statistics of first 5 columns
 summary(CEO_Diary[1:5])
+
 #creating directory to store figures
 dir.create("~/Desktop/Data_science/OUTPUT_FIGURES")
 
