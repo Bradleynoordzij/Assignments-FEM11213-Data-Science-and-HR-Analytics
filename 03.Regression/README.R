@@ -40,6 +40,25 @@ glm(log(sales) ~ log(price)*brand*feat, data=oj)
 #log sales as response variable, log price, brand and features as predictive variables. Including interaction terms
 #the feat variable is a dummy variable that denotes whether a brand is promoted at that time
 
+#using Taddy Naref function to create separate dummies for each level by creating extra factor level, making NA the reference level
+xnaref <- function(x){
+  if (is.factor(x))
+    if(!is.na(levels(x)[1]))
+      x<- factor(x,levels=c(NA, levels(x)), exclude = NULL)
+return(x)}
+
+naref <- function(DF) {
+  if(is.null(dim(DF))) return(xnaref(DF))
+  if(!is.data.frame(DF))
+    stop("You need to give me a data.frame or a factor")
+  DF <- lapply(DF, xnaref)
+return(as.data.frame(DF)) }
+
+#New OJ design with all brands, reference NA
+oj$brand <- naref(oj$brand)
+xbrand <- sparse.model.matrix(~ brand, data=oj)
+xbrand [c(100,200,300),]
+
 
 #logistic regression
 #opens spam email data
