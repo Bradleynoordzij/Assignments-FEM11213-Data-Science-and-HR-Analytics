@@ -1,0 +1,36 @@
+For specific changes and analysis of the code check the .r file.
+Web Browsers Data Analysis
+Overview
+This R script analyzes data related to web browsers stored in a CSV file (web-browsers.csv). The analysis includes exploratory data analysis, statistical measures, bootstrapping, and logistic regression techniques.
+
+Tasks Performed
+Loading Data:
+
+Reads web browser data from a CSV file into a data frame called browser.
+Data Exploration:
+
+Displays the dimensions (rows and columns) of the dataset.
+Shows the first six rows of the dataset.
+Descriptive Statistics:
+
+Computes and displays the mean, variance, and standard deviation of online spending.
+Bootstrapping:
+
+Creates bootstrap samples and calculates the standard deviation, demonstrating the reliability of the technique.
+Generates histograms of bootstrap sample means.
+Fits logistic regression models to bootstrap samples and calculates covariances.
+Logistic Regression:
+
+Fits a logistic regression model using the original dataset, estimating coefficients and displaying summary statistics.
+Bootstrap Regression:
+
+Performs bootstrap regressions, storing estimated coefficients.
+False Discovery Rate Control:
+
+Implements the Benjamini-Hochberg algorithm to control the False Discovery Rate.
+Plots and saves visualizations of the algorithm's results.
+Output
+Descriptive Statistics: Mean, variance, and standard deviation.
+Bootstrap Analysis: Histograms, bootstrap standard deviations, and regression coefficients.
+Logistic Regression: Estimated coefficients and summary statistics.
+False Discovery Rate Control: Plots demonstrating FDR control.
