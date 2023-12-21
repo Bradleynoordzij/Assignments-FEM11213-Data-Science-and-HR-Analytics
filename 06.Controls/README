@@ -1,0 +1,66 @@
+# Consumer Demand Elasticities Estimation
+
+## Part 1
+
+This R script demonstrates the estimation of consumer demand elasticities using regression models. The code is divided into sections, each addressing a specific aspect of demand analysis. For specific changes and analysis of the code check the .r file.
+
+### Linear Regression Models
+
+- **Simple Log-Log Regression:**
+  - Reads data from "oj.csv."
+  - Fits a log-log regression model using the base model.
+  - Displays coefficients.
+
+- **Log-Log Regression Controlling for Brand:**
+  - Extends the model by including brand as a control variable.
+  - Displays coefficients, emphasizing the partial effect of price on sales.
+
+- **Residual Analysis:**
+  - Utilizes residuals from the log price-brand regression to predict log sales.
+  - Fits a model using the residuals to analyze the independent effect of price on sales.
+
+### Crime Rate and Abortion Data Analysis
+
+- **Abortion Data Preprocessing:**
+  - Reads data from "abortion.dat" and performs data cleaning.
+  - Filters out specific states and years.
+
+- **Crime Rate Regression:**
+  - Applies Ordinary Least Squares (OLS) regression to estimate the effect of abortion rates on murder rates.
+  - Conducts various model specifications, testing the importance of time and state fixed effects.
+
+- **Cellphone and Abortion Rates:**
+  - Analyzes the relationship between cellphone rates and crime rates.
+  - Plots the data.
+
+- **Lasso Regression:**
+  - Uses Lasso regression to estimate causal effects of abortion rates on crime rates.
+
+### Uncertainty Quantification with Lasso Regressions
+
+- **Hockey Data Analysis:**
+  - Applies Lasso regression to hockey data for uncertainty quantification.
+
+## Part 2
+
+### Orthogonal ML for Local Treatment Effects (LTE)
+
+- **Orthogonal ML Function:**
+  - Defines an R function for Orthogonal ML to estimate local treatment effects.
+
+- **Orthogonal ML and Abortion Access:**
+  - Applies Orthogonal ML to estimate the effect of abortion access on crime rates.
+
+### Heterogeneous Treatment Effects (HTE)
+
+- **Health Insurance Effect Analysis:**
+  - Explores the heterogeneous treatment effects of health insurance on various health outcomes.
+  - Utilizes descriptive, program, and survey data.
+
+### Consumer Demand Estimation and Heterogeneous Treatment Effects
+
+- **Beer Demand Analysis:**
+  - Reads beer-related data.
+  - Estimates demand elasticities using Lasso and Orthogonal ML.
+  - Visualizes elasticity distribution.
+
