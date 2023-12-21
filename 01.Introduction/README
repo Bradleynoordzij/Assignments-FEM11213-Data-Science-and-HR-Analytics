@@ -1,0 +1,25 @@
+For specific changes and analysis of the code check the .r file.
+Survey Response Data Analysis
+Overview
+This R script analyzes survey response data stored in a CSV file (survey_response_data.csv). The script covers various aspects of data exploration, visualization, and logistic regression analysis.
+
+Tasks Performed
+Loading Data:
+
+Reads survey response data into a data frame (CEO_Diary).
+Exploratory Data Analysis:
+
+Displays dataset and subsets.
+Checks variable types and counts rows.
+Provides summary statistics.
+Data Visualization:
+
+Generates barplots for the 'type' variable.
+Saves plots in PNG format with different configurations.
+Logistic Regression Analysis:
+
+Fits a logistic regression model using 'strategy' as the response variable and 'consultants' and 'politicians' as control variables.
+Displays summary of regression coefficients.
+Output
+Visualizations: Barplots saved in the OUTPUT_FIGURES directory.
+Regression Analysis: Summary of logistic regression output.
