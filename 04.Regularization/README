@@ -1,0 +1,40 @@
+For specific changes and analysis of the code check the .r file.
+Semiconductor Failure Prediction and Web Browsing Analysis
+Semiconductor Failure Prediction
+Loading and Fitting Generalized Linear Model
+Reads semiconductor failure data from a CSV file into a dataset named SC.
+Fits a generalized linear model (glm) to predict the binary outcome variable FAIL, using all variables in the SC dataset.
+Model Summary and R-squared Calculation
+Calculates the R-squared value using the deviance and null deviance.
+Summarizes the fitted model to extract coefficients.
+Demonstrates the in-sample R-squared calculation using the formula.
+Out-of-Sample Prediction Experiment
+Defines custom functions (deviance and R2) for calculating deviance and R-squared.
+Conducts a K-fold cross-validation experiment (default K=10) to assess model performance out-of-sample.
+Plots the boxplot of R-squared values and saves it as a PNG file.
+Calculates the average R-squared values for the K-fold experiment.
+Test with 20 Folds
+Conducts the K-fold experiment with 20 folds and assesses the average R-squared values.
+Concludes the robustness of results, noting that the model predicts worse than the null model.
+Forward Stepwise Regression
+Performs forward stepwise regression until the AIC decreases.
+Prints the number of selected coefficients.
+Backward Stepwise Regression (Caution)
+Attempts backward stepwise regression but notes potential issues due to multicollinearity and overfitting.
+Warns about the extended runtime and estimates of p-values on an overfit model.
+Web Browsing Analysis
+Data Preparation
+Reads web browsing data from a CSV file into a dataset named web.
+Converts site and machine IDs to factors with appropriate levels.
+Creates a sparse matrix (xweb) to represent website visit percentages per machine.
+Top Websites Analysis
+Calculates the total percentage of visits for each website.
+Identifies the top websites based on total percentage and displays the results.
+LASSO Regression for Spending Prediction
+Reads spending data from a CSV file into a matrix named yspend.
+Runs a LASSO path plot and saves it as a PNG file.
+Conducts K-fold cross-validation for LASSO and plots the results, saving as a PNG file.
+Extracts coefficients for the minimum cross-validation error.
+AIC for Model Selection
+Demonstrates the use of Aikaike's Information Criterion (AIC) for model selection.
+Displays the first six AIC values for the LASSO model.
