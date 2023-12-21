@@ -1,0 +1,40 @@
+For specific changes and analysis of the code check the .r file.
+Overview
+Dataset Loading and Exploration
+Loads the fgl dataset from the MASS package.
+Displays the dimensions (214 rows and 10 columns) and the first two rows of the dataset.
+KNN Plotting
+Creates and saves different plots for variables (RI, Al, Na, Mg, Ba, Si) against the glass type.
+Saves the plots as a PNG file.
+KNN Implementation
+Scales the features of the fgl dataset using the scale function.
+Uses the knn function from the class library to perform K-nearest neighbors classification.
+Conducts three tests with different numbers of rows (10, 20, 10) to assess KNN predictability.
+Displays the results showing predicted classes for nearest 1, 3, 5, 10, and 15 neighbors.
+Classification Example with German Credit Data
+Reads and preprocesses the German Credit Data.
+Creates dummy variables and levels for categorical variables.
+Selects specific columns for analysis.
+Defines the xnaref and naref functions for handling missing values in factors.
+Applies LASSO penalized multinomial regression using the gamlr package.
+Plots the regularization path, out-of-sample prediction performance, and CV-min.
+Analysis and Visualizations
+Displays AIC values for model selection.
+Identifies the optimal lambda (min AIC) and counts the number of selected coefficients.
+Calculates the out-of-sample R-squared and displays the underlying default probabilities.
+Creates a boxplot of default probabilities for true defaults and non-defaults.
+Classification Rule
+Implements and tests classification rules with varying costs and evaluates false positives and false negatives.
+ROC Curve
+Generates in-sample and out-of-sample ROC curves.
+Plots ROC curves and saves them as a PNG file.
+Mosaic Plot
+Creates a mosaic plot to visualize the relationship between credit history and loan outcomes.
+Demonstrates that default rates decrease for worse credit history due to the limited availability of large loans.
+Multinomial Logistic Regression
+Applies LASSO penalized multinomial regression to the fgl dataset.
+Plots the regularization path and displays OOS deviance across CV folds.
+Extracts coefficients and calculates the difference in coefficients for the predictor Mg between classes WinNF and WinF.
+Probability Prediction and Visualization
+Predicts probabilities for each class based on the multinomial logistic regression model.
+Creates a bar plot to visualize predicted probabilities for the true class of each observation.
