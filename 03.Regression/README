@@ -1,0 +1,46 @@
+For specific changes and analysis of the code check the .r file.
+OJ and Email Data Analysis
+Overview
+This R script analyzes two datasets: one related to orange juice sales (oj.csv) and another concerning spam emails (spam.csv). The analysis includes generalized linear models, logistic regression, and various techniques for handling categorical variables.
+
+Orange Juice Sales Analysis
+Loading Data:
+
+Reads orange juice sales data from a CSV file into a data frame called oj.
+Displays the first and last five rows of the dataset.
+Generalized Linear Model:
+
+Fits a generalized linear model with a logarithmic link function to predict the logarithmic change in sales.
+Examines coefficients and explores variations with different predictors.
+Handling Categorical Variables:
+
+Demonstrates how to create dummy variables and change the base category for categorical predictors.
+Explores less restrictive regression models with interaction terms.
+Taddy Naref Function:
+
+Introduces a function (xnaref) to handle factor variables with a reference level of NA.
+Applies the function to the 'brand' variable in the OJ dataset.
+Sparse Model Matrix:
+
+Uses Taddy Naref function to create separate dummies for each level, making NA the reference level.
+Spam Email Analysis
+Loading Data:
+
+Reads spam email data from a CSV file into a data frame called email.
+Displays the dimensions and column names of the dataset.
+Logistic Regression:
+
+Fits a logistic regression model to predict spam emails using all variables in the dataset.
+Extracts and interprets coefficients for specific words in emails.
+Computes odds ratios for selected words.
+Prediction and Probability:
+
+Predicts whether the first and 4000th observations are spam based on the fitted model.
+Computes the probability of being spam for these observations.
+Deviance and Likelihood:
+
+Calculates and examines the deviance and null deviance.
+Computes the R-squared value as a measure of model fit.
+Output
+Orange Juice Sales Analysis: Coefficients, regression variations, and handling categorical variables.
+Spam Email Analysis: Logistic regression results, coefficients, prediction probabilities, and model fit statistics.
